@@ -1,0 +1,1 @@
+# Taking-input-and-showing-output-both-using-pointer
