@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int i,x[4],*p;
+    p=x;
+
+    for(i=0; i<4; i++)
+    {
+        cout<<p<<": ";
+        cin>>*p++;
+        //p++;
+    }
+    cout<<p<<": ";
+
+    p=p-4; 
+    //4 is the size of array
+    //as 4 is an integer and 1 integer = 1 block, so (p-4) indicates that p should point from 4 block ago 
+    //conclusion:
+    //i. if we write p=p-4, output will be the all 4 integers we inputed
+    //ii. if we write p=p-3, output will be 3 integers we inputed and 1 garbage   
+    //iii. if we write p=p-2, output will be 2 integers we inputed and 2 garbage   
+    //iv. if we write p=p-1, output will be 1 integers we inputed and 3 garbage   
+
+    cout<<endl;
+
+
+    for(i=0; i<4; i++)
+    {
+        cout<<p<<": ";
+
+        //cout<<x[i]<<endl;
+        cout<<*p++<<endl;
+    }
+
+    cout<<endl;
+
+    return 0;
+}
